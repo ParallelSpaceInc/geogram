@@ -45,7 +45,7 @@ set_source_files_properties(version.h PROPERTIES GENERATED true)
 
 include_directories(${PROJECT_BINARY_DIR}/src/lib)
 
-add_library(geogram ${SOURCES} $<TARGET_OBJECTS:geogram_third_party>)
+add_library(geogram STATIC ${SOURCES} $<TARGET_OBJECTS:geogram_third_party>)
 
 target_compile_features(geogram PUBLIC cxx_std_17)
 
